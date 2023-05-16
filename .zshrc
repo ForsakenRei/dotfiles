@@ -129,3 +129,5 @@ alias ports="netstat -tulanp"
 #alias e3s1="sudo chmod 777 /dev/ttyUSB0"
 
 source /home/shigure/.config/broot/launcher/bash/br
+
+export EDITOR="/usr/local/bin/nvim"
