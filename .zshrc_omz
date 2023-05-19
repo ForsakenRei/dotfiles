@@ -73,7 +73,6 @@ ZSH_THEME="agnoster"
 plugins=(git
 zsh-autosuggestions
 zsh-syntax-highlighting
-zsh-interactive-cd
 fzf
 sudo)
 
@@ -131,5 +130,7 @@ alias ports="ss -tulanp"
 #alias e3s1="sudo chmod 777 /dev/ttyUSB0"
 
 source /home/shigure/.config/broot/launcher/bash/br
+
+source /home/shigure/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 export EDITOR="/usr/local/bin/nvim"
