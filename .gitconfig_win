@@ -1,0 +1,49 @@
+[user]
+	name = ForsakenRei
+	email = 23041178+ForsakenRei@users.noreply.github.com
+	signingkey = 7B48F184550EC642
+[init]
+	defaultBranch = main
+[core]
+	editor = \"C:\\Users\\Shigure\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+	autocrlf = input
+	whitespace = -indent-with-non-tab,-space-before-tab,trailing-space,cr-at-eol
+[color]
+	ui = auto
+[color "branch"]
+	current = green bold
+	remote = cyan bold
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[alias]
+	a = add
+	aa = add .
+	br = branch
+	ba = branch -a
+	bd = branch --delete
+	cm = commit
+	ca = commit -a
+	csm = commit -S -m
+	csa = commit -S --amend
+	df = diff
+	ft = fetch
+	fu = fetch upstream
+	co = checkout
+	ps = push
+	psf = push -f
+	psu = push --set-upstream
+	pl = pull
+	plu = pull upstream
+	re = reset
+	rh = reset HEAD
+	reh = reset --hard
+	ra = remote add
+	rr = remote remove
+	rv = remote -v
+	rso = remote set-url origin
+	st = status
+	sa = stash apply
+	sp = stash pop
+	s = stash
