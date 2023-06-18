@@ -44,7 +44,11 @@ alias tms="tmux new -s"
 alias tmk="tmux kill-set -t"
 alias tml="tmux ls"
 alias vi="nvim"
-alias ports="ss -tulanp"
+alias ss="ss -tulanp"
+alias ps="ps -aux"
+alias x="exit"
+alias x="exit"
+alias e="ehco"
 
 source /home/shigure/.config/broot/launcher/bash/br
 
