@@ -24,16 +24,11 @@ fi
 eval "$(zoxide init zsh)"
 
 alias zshconfig="nvim ~/.zshrc"
-alias ea="exa -lahg"
-alias el="exa -lhg"
-alias dh="duf -hide special"
-alias du="duf"
 alias md="mkdir"
 alias c="clear"
-alias cd="z"
-alias ..="z ../"
-alias ...="z ../../"
-alias ....="z ../../../"
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
 alias sudo="sudo "
 alias h="history"
 alias j="jobs -l"
@@ -43,13 +38,39 @@ alias tma="tmux attach -d -t"
 alias tms="tmux new -s"
 alias tmk="tmux kill-set -t"
 alias tml="tmux ls"
-alias vi="nvim"
 alias ss="ss -tulanp"
 alias ps="ps -aux"
 alias x="exit"
-alias x="exit"
 alias e="ehco"
 
-source /home/shigure/.config/broot/launcher/bash/br
+if [[ -x "$(command -v exa)" ]]; then
+    alias ll="exa --icons --git -lhg --group-directories-first"
+    alias la="exa --icons --git -lahg --group-directories-first"
+    alias ld="exa --icons --git -lahgD"
+else
+    alias ll="ls -lh --group-directories-first"
+    alias la="ls -lah --group-directories-first"
+    alias ld="ls -lahd"  
+fi
+
+if [[ -x "$(command -v nvim)" ]]; then
+    alias vi="nvim"
+else
+    alias vi="vi"
+fi
+
+if [[ -x "$(command -v zoxide)" ]]; then
+    alias cd="z"
+else
+    alias cd="cd"
+fi
+
+if [[ -x "$(command -v duf)" ]]; then
+    alias df="duf"
+else
+    alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
+fi
+
+source $HOME/.config/broot/launcher/bash/br
 
 export EDITOR="/usr/local/bin/nvim"
