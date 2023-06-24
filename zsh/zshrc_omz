@@ -126,6 +126,8 @@ alias ss="ss -tulanp"
 alias ps="ps -aux"
 alias x="exit"
 alias e="ehco"
+alias jctl="journalctl -xeu"
+alias sctl="systemctl"
 
 if [[ -x "$(command -v exa)" ]]; then
     alias ll="exa --icons --git -lhg --group-directories-first"
@@ -134,7 +136,7 @@ if [[ -x "$(command -v exa)" ]]; then
 else
     alias ll="ls -lh --group-directories-first"
     alias la="ls -lah --group-directories-first"
-    alias ld="ls -lahd"  
+    alias ld="ls -lahd */"  
 fi
 
 if [[ -x "$(command -v nvim)" ]]; then
@@ -144,9 +146,9 @@ else
 fi
 
 if [[ -x "$(command -v zoxide)" ]]; then
-    alias z="cd"
+    alias cd="z"
 else
-    alias z="z"
+    alias cd="cd"
 fi
 
 if [[ -x "$(command -v duf)" ]]; then
