@@ -157,6 +157,12 @@ else
     alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
 fi
 
+if [[ -x "$(command -v rg)" ]]; then
+    alias rg="rg -n"
+else
+    alias rg="grep -n --color=auto"
+fi
+
 #alias e3s1="sudo chmod 777 /dev/ttyUSB0"
 
 source $HOME/.config/broot/launcher/bash/br

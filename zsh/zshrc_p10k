@@ -73,6 +73,12 @@ else
     alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
 fi
 
+if [[ -x "$(command -v rg)" ]]; then
+    alias rg="rg -n"
+else
+    alias rg="grep -n --color=auto"
+fi
+
 source $HOME/.config/broot/launcher/bash/br
 
 export EDITOR="/usr/local/bin/nvim"

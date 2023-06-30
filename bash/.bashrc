@@ -24,3 +24,5 @@ alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
 alias ll="ls -lh --group-directories-first"
 alias la="ls -lah --group-directories-first"
 alias ld="ls -lahd */"
+
+alias grep="grep -n --color=auto"
