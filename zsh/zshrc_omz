@@ -108,15 +108,16 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 
 alias zshconfig="nvim ~/.zshrc"
-alias md="mkdir"
+alias md="mkdir -p"
 alias c="clear"
+alias cat="bat --theme=TwoDark"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias sudo="sudo "
 alias h="history"
 alias j="jobs -l"
-alias k="kill"
+alias k="kill -9"
 alias tm="tmux"
 alias tma="tmux attach -d -t"
 alias tms="tmux new -s"
@@ -128,15 +129,18 @@ alias x="exit"
 alias e="ehco"
 alias jctl="journalctl -xeu"
 alias sctl="systemctl"
+alias grep="rg"
 
 if [[ -x "$(command -v exa)" ]]; then
     alias ll="exa --icons --git -lhg --group-directories-first"
     alias la="exa --icons --git -lahg --group-directories-first"
     alias ld="exa --icons --git -lahgD"
+    alias lf="exa --icons --git -lahg | rg -v '^d'"
 else
     alias ll="ls -lh --group-directories-first"
     alias la="ls -lah --group-directories-first"
-    alias ld="ls -lahd */"  
+    alias ld="ls -lahd */"
+    alias lf="ls -lah | rg -v '^d'"
 fi
 
 if [[ -x "$(command -v nvim)" ]]; then
