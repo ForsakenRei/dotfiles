@@ -1,3 +1,4 @@
+alias zshconfig="nvim ~/.zshrc"
 alias md="mkdir -p"
 alias c="clear"
 alias ..="cd ../"
@@ -24,5 +25,8 @@ alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
 alias ll="ls -lh --group-directories-first"
 alias la="ls -lah --group-directories-first"
 alias ld="ls -lahd */"
+alias lf="ls -lah | rg -v '^d'"
 
-alias grep="grep -n --color=auto"
+alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
+
+alias rg="grep -n --color=auto"
