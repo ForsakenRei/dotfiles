@@ -20,13 +20,44 @@ alias e="ehco"
 alias jctl="journalctl -xeu"
 alias sctl="systemctl"
 
-alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
+if [[ -x "$(command -v exa)" ]]; then
+    alias ll="exa --icons --git -lhg --group-directories-first"
+    alias la="exa --icons --git -lahg --group-directories-first"
+    alias ld="exa --icons --git -lahgD"
+    alias lf="exa --icons --git -lahg | rg -v '^d'"
+else
+    alias ll="ls -lh --group-directories-first"
+    alias la="ls -lah --group-directories-first"
+    alias ld="ls -lahd */"
+    alias lf="ls -lah | rg -v '^d'"
+fi
 
-alias ll="ls -lh --group-directories-first"
-alias la="ls -lah --group-directories-first"
-alias ld="ls -lahd */"
-alias lf="ls -lah | rg -v '^d'"
+if [[ -x "$(command -v nvim)" ]]; then
+    alias vi="nvim"
+else
+    alias vi="vi"
+fi
 
-alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
+if [[ -x "$(command -v zoxide)" ]]; then
+    alias cd="z"
+else
+    alias cd="cd"
+fi
 
-alias rg="grep -n --color=auto"
+if [[ -x "$(command -v duf)" ]]; then
+    alias df="duf"
+else
+    alias df="df -hT | { read -r line; echo "$line"; sort -k 7,7; }"
+fi
+
+if [[ -x "$(command -v rg)" ]]; then
+    alias rg="rg -n"
+else
+    alias rg="grep -n --color=auto"
+fi
+
+if [[ -x "$(command -v bat)" ]]; then
+    alias cat="bat --theme=TwoDark"
+else
+    alias cat="cat"
+fi

@@ -110,7 +110,6 @@ eval "$(zoxide init zsh)"
 alias zshconfig="nvim ~/.zshrc"
 alias md="mkdir -p"
 alias c="clear"
-alias cat="bat --theme=TwoDark"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
@@ -129,7 +128,6 @@ alias x="exit"
 alias e="ehco"
 alias jctl="journalctl -xeu"
 alias sctl="systemctl"
-alias grep="rg"
 
 if [[ -x "$(command -v exa)" ]]; then
     alias ll="exa --icons --git -lhg --group-directories-first"
@@ -165,6 +163,12 @@ if [[ -x "$(command -v rg)" ]]; then
     alias rg="rg -n"
 else
     alias rg="grep -n --color=auto"
+fi
+
+if [[ -x "$(command -v bat)" ]]; then
+    alias cat="bat --theme=TwoDark"
+else
+    alias cat="cat"
 fi
 
 #alias e3s1="sudo chmod 777 /dev/ttyUSB0"
