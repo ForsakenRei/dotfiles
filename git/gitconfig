@@ -33,6 +33,7 @@
 	csm = commit -S -m
 	csa = commit -S --amend
 	df = diff
+	ds = diff --staged
 	ft = fetch
 	fu = fetch upstream
 	mg = merge
@@ -52,3 +53,6 @@
 	st = status
 	sa = stash apply
 	sp = stash pop
+	smu = submodule update --init --recursive
+	sma = submodule add
+	smi = submodule init

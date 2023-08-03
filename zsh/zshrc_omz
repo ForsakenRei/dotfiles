@@ -124,6 +124,7 @@ alias tmk="tmux kill-set -t"
 alias tml="tmux ls"
 alias ss="ss -tulanp"
 alias ps="ps aux"
+alias ping="ping -c 5"
 alias x="exit"
 alias e="ehco"
 alias jctl="journalctl -xeu"
@@ -169,6 +170,12 @@ if [[ -x "$(command -v bat)" ]]; then
     alias cat="bat --theme=TwoDark"
 else
     alias cat="cat"
+fi
+
+if [[ -x "$(command -v btop)" ]]; then
+    alias top="btop"
+else
+    alias top="top"
 fi
 
 #alias e3s1="sudo chmod 777 /dev/ttyUSB0"
