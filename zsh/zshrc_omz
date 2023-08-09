@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
 
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="vi ~/.zshrc"
 alias md="mkdir -p"
 alias c="clear"
 alias ..="cd ../"
