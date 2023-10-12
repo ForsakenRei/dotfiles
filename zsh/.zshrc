@@ -36,7 +36,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(zoxide init zsh)"
+if [[ -e ~/.local/bin/zoxide ]]; then
+    eval "$(zoxide init zsh)"
+fi
 
 alias zshconfig="vi ~/.zshrc"
 alias md="mkdir -p"
@@ -109,8 +111,12 @@ else
     alias top="top"
 fi
 
-#alias e3s1="sudo chmod 777 /dev/ttyUSB0" for 3d printer only
+# for sbc attached to 3d printer
+# alias e3s1="sudo chmod 777 /dev/ttyUSB0" 
 
-source $HOME/.config/broot/launcher/bash/br
+# if broot is installed
+if [[ -e $HOME/.config/broot/launcher/bash/br ]]; then
+    source $HOME/.config/broot/launcher/bash/br
+fi
 
 export EDITOR="/usr/local/bin/nvim"
