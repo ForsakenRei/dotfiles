@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -17,6 +19,8 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+setopt autocd notify
 
 # Use powerline
 USE_POWERLINE="true"
@@ -36,9 +40,13 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-if [[ -e ~/.local/bin/zoxide ]]; then
-    eval "$(zoxide init zsh)"
-fi
+[ -e ~/.local/bin/zoxide ] && eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -e $HOME/.config/broot/launcher/bash/br ] && source $HOME/.config/broot/launcher/bash/br
+
+[ -e /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
 alias zshconfig="vi ~/.zshrc"
 alias md="mkdir -p"
@@ -113,10 +121,5 @@ fi
 
 # for sbc attached to 3d printer
 # alias e3s1="sudo chmod 777 /dev/ttyUSB0" 
-
-# if broot is installed
-if [[ -e $HOME/.config/broot/launcher/bash/br ]]; then
-    source $HOME/.config/broot/launcher/bash/br
-fi
 
 export EDITOR="/usr/local/bin/nvim"
