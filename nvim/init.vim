@@ -7,6 +7,8 @@ syntax on
 filetype plugin on
 filetype plugin indent on
 
+tnoremap <Esc> <C-\><C-n>
+
 call plug#begin("~/.local/share/nvim/site/plugged")
  " Plugin Section
  Plug 'navarasu/onedark.nvim'
@@ -27,8 +29,13 @@ call plug#end()
 
 colorscheme onedark
 
-lua require('telescope').setup{file_browser = {theme = 'ivy'}}
-lua require('telescope').load_extension 'file_browser'
-lua require('toggleterm').setup()
-lua require('nvim-tree').setup()
-lua require('barbar').setup{sidebar_filetypes = {NvimTree = true}}
+lua <<EOF
+require('telescope').setup{file_browser = {theme = 'ivy'}}
+require('telescope').load_extension 'file_browser'
+require('toggleterm').setup{open_mapping = [[<c-\>]]}
+require('nvim-tree').setup()
+vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
+require('barbar').setup{sidebar_filetypes = {NvimTree = true}}
+EOF
+
+let g:startify_custom_header = []
