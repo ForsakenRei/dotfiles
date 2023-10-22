@@ -119,6 +119,12 @@ else
     alias top="top"
 fi
 
+if [[ -x "$(command -v gdu)" ]]; then
+    alias du="gdu"
+else
+    alias du="du -hd 1 | sort -rh"
+fi
+
 # for sbc attached to 3d printer
 # alias e3s1="sudo chmod 777 /dev/ttyUSB0" 
 
