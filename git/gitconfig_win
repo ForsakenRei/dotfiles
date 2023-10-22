@@ -55,4 +55,5 @@
 	smu = submodule update --init --recursive
 	sma = submodule add
 	smi = submodule init
-	
+[credential "https://github.com"]
+	username = ForsakenRei
