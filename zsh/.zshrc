@@ -40,6 +40,10 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export EDITOR="/usr/local/bin/nvim"
+
+export PATH="$HOME/.local/bin:$PATH"
+
 [ -e /usr/bin/zoxide ] || [ -e ~/.local/bin/zoxide ] && eval "$(zoxide init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -127,5 +131,3 @@ fi
 
 # for sbc attached to 3d printer
 # alias e3s1="sudo chmod 777 /dev/ttyUSB0" 
-
-export EDITOR="/usr/local/bin/nvim"
