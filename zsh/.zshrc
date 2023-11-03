@@ -36,22 +36,32 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# zsh plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# use neovim as default editor
 export EDITOR="/usr/local/bin/nvim"
-
-export PATH="$HOME/.local/bin:$PATH"
-
-[ -e /usr/bin/zoxide ] || [ -e ~/.local/bin/zoxide ] && eval "$(zoxide init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-[ -e $HOME/.config/broot/launcher/bash/br ] && source $HOME/.config/broot/launcher/bash/br
 
 [ -e /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# zoxide
+export PATH="$HOME/.local/bin:$PATH"
+[ -e /usr/bin/zoxide ] || [ -e ~/.local/bin/zoxide ] && eval "$(zoxide init zsh)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# broot
+[ -e $HOME/.config/broot/launcher/bash/br ] && source $HOME/.config/broot/launcher/bash/br
+
+# alias
 alias zshconfig="vi ~/.zshrc"
 alias md="mkdir -p"
 alias c="clear"
@@ -75,6 +85,7 @@ alias e="ehco"
 alias jctl="journalctl -xeu"
 alias sctl="systemctl"
 
+# conditional alias
 if [[ -x "$(command -v exa)" ]]; then
     alias ll="exa --icons --git -lhg --group-directories-first"
     alias la="exa --icons --git -lahg --group-directories-first"
