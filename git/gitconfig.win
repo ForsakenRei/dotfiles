@@ -48,7 +48,7 @@
 	rr = remote remove
 	rv = remote -v
 	rso = remote set-url origin
-	rmc = remove --cached
+	rmc = rm --cached
 	s = stash
 	st = status
 	sa = stash apply
