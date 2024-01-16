@@ -28,8 +28,8 @@
 	bd = branch --delete
 	c = clean
 	co = checkout
-	cm = commit
-	ca = commit -a
+	cm = commit -m
+	ca = commit -am
 	csm = commit -S -m
 	csa = commit -S --amend
 	df = diff
