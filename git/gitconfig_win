@@ -21,7 +21,7 @@
 	untracked = red bold
 [alias]
 	a = add
-	aa = add .
+	aa = add -A
 	br = branch
 	ba = branch -a
 	bd = branch --delete
