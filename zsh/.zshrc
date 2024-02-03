@@ -86,11 +86,11 @@ alias jctl="journalctl -xeu"
 alias sctl="systemctl"
 
 # conditional alias
-if [[ -x "$(command -v exa)" ]]; then
-    alias ll="exa --icons --git -lhg --group-directories-first"
-    alias la="exa --icons --git -lahg --group-directories-first"
-    alias ld="exa --icons --git -lahgD"
-    alias lf="exa --icons --git -lahg | rg -v '^d'"
+if [[ -x "$(command -v eza)" ]]; then
+    alias ll="eza --icons --git -lhg --group-directories-first"
+    alias la="eza --icons --git -lahg --group-directories-first"
+    alias ld="eza --icons --git -lahgD"
+    alias lf="eza --icons --git -lahg | rg -v '^d'"
 else
     alias ll="ls -lh --group-directories-first"
     alias la="ls -lah --group-directories-first"
