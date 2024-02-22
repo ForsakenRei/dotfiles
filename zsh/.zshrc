@@ -49,8 +49,8 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+[ -e ~/.pyenv ] && command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[ -e ~/.pyenv ] && eval "$(pyenv init -)"
 
 # zoxide
 export PATH="$HOME/.local/bin:$PATH"
