@@ -58,3 +58,5 @@
 	smi = submodule init
 [credential "https://github.com"]
 	username = ForsakenRei
+[commit]
+	gpgsign = true
