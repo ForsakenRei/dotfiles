@@ -2,10 +2,6 @@
 	name = ForsakenRei
 	email = 23041178+ForsakenRei@users.noreply.github.com
 	signingkey = 7B48F184550EC642
-[credential]
-	credentialStore = cache
-	cacheoptions = --timeout 36000
-	# helper = store
 [init]
 	defaultBranch = main
 [core]
@@ -59,5 +55,7 @@
 	smi = submodule init
 [credential "https://github.com"]
 	username = ForsakenRei
+	credentialStore = cache
+	cacheoptions = --timeout 36000
 [commit]
 	gpgsign = true
