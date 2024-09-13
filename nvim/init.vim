@@ -44,20 +44,20 @@ require('telescope').setup{file_browser = {theme = 'ivy'}}
 require('telescope').load_extension 'file_browser'
 require('toggleterm').setup{open_mapping = [[<c-\>]]}
 require('nvim-tree').setup()
-require('mini.pairs').setup()
 vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 require('barbar').setup{sidebar_filetypes = {NvimTree = true}}
 require('ibl').setup()
 require('neoclip').setup()
+require('mini.pairs').setup()
 EOF
 
-lua <<EOF.
+lua <<EOF
   local cmp = require'cmp'
 
   cmp.setup({
     preselect = cmp.PreselectMode.None,
     completion = {
-      completeopt = "menuone,noselect"
+      completeopt = "menu,menuone,noselect"
     },
     snippet = {
       expand = function(args)
@@ -73,7 +73,7 @@ lua <<EOF.
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = false }), 
+      ['<CR>'] = cmp.mapping.confirm({ select = false }),
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
