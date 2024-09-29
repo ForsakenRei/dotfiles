@@ -41,6 +41,7 @@ call plug#begin("~/.local/share/nvim/site/plugged")
  Plug 'hrsh7th/vim-vsnip'
  Plug 'neovim/nvim-lspconfig'
  Plug 'echasnovski/mini.pairs', { 'branch': 'stable' }
+ Plug 'sbdchd/neoformat'
 call plug#end()
 
 colorscheme onedark
