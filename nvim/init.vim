@@ -2,6 +2,12 @@ set number
 set hlsearch
 set clipboard+=unnamedplus
 set ttyfast
+set splitright
+set splitbelow
+set cursorline
+set list
+set lcs=tab:'»,trail:·,lead:·,nbsp:␣
+set timeoutlen=300
 
 syntax on
 filetype plugin on
