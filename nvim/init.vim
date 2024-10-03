@@ -40,8 +40,8 @@ call plug#begin("~/.local/share/nvim/site/plugged")
  Plug 'hrsh7th/nvim-cmp'
  Plug 'hrsh7th/vim-vsnip'
  Plug 'neovim/nvim-lspconfig'
- Plug 'echasnovski/mini.pairs', { 'branch': 'stable' }
  Plug 'sbdchd/neoformat'
+ Plug 'cohama/lexima.vim'
 call plug#end()
 
 colorscheme onedark
@@ -55,7 +55,6 @@ vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, nor
 require('barbar').setup{sidebar_filetypes = {NvimTree = true}}
 require('ibl').setup()
 require('neoclip').setup()
-require('mini.pairs').setup()
 EOF
 
 lua <<EOF
