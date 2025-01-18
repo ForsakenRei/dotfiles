@@ -26,9 +26,10 @@
 	c = clean
 	co = checkout
 	cm = commit -m
-	ca = commit -am
+	ca = commit --amend
 	csm = commit -S -m
 	csa = commit -S --amend
+	cp = cherry-pick
 	df = diff
 	ds = diff --staged
 	ft = fetch
@@ -39,7 +40,7 @@
 	psu = push --set-upstream
 	pl = pull
 	plu = pull upstream
-	rb = rebase
+	rb = rebase -i
 	re = reset
 	rh = reset --hard
 	ra = remote add
@@ -48,9 +49,9 @@
 	rso = remote set-url origin
 	rmc = rm --cached
 	s = stash
-	st = status
 	sa = stash apply
 	sp = stash pop
+	st = status
 	smu = submodule update --init --recursive
 	sma = submodule add
 	smi = submodule init
