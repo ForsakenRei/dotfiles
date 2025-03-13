@@ -51,8 +51,12 @@ require('telescope').setup{file_browser = {theme = 'ivy'}}
 require('telescope').load_extension 'file_browser'
 require('toggleterm').setup{open_mapping = [[<c-\>]]}
 require('nvim-tree').setup({
+  hijack_cursor = true,
   filters = {
     dotfiles = false,
+  },
+  renderer = {
+    highlight_opened_files = "icon",
   },
 })
 vim.g.loaded_netrw = 1
