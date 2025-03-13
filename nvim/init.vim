@@ -19,7 +19,6 @@ tnoremap <Esc> <C-\><C-n>
 call plug#begin("~/.local/share/nvim/site/plugged")
  " Plugin Section
  Plug 'navarasu/onedark.nvim'
- Plug 'ryanoasis/vim-devicons'
  Plug 'nvim-lua/plenary.nvim'
  Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.8'}
  Plug 'nvim-telescope/telescope-file-browser.nvim'
