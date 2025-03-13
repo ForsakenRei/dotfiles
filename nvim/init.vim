@@ -7,7 +7,8 @@ set splitbelow
 set cursorline
 set list
 set lcs=tab:'»,trail:·,lead:·,nbsp:␣
-set timeoutlen=300
+set timeoutlen=1500
+let mapleader=","
 
 syntax on
 filetype plugin on
