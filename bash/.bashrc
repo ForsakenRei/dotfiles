@@ -61,3 +61,21 @@ if [[ -x "$(command -v bat)" ]]; then
 else
     alias cat="cat"
 fi
+
+if [[ -x "$(command -v btop)" ]]; then
+    alias top="btop"
+else
+    alias top="top"
+fi
+
+if [[ -x "$(command -v gdu)" ]]; then
+    alias du="gdu"
+else
+    alias du="du -hd 1 | sort -rh"
+fi
+
+if [[ -x "$(command -v fd)" ]]; then
+    alias fd="fd"
+else
+    alias fd="find"
+fi

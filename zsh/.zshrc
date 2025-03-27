@@ -147,6 +147,12 @@ else
     alias du="du -hd 1 | sort -rh"
 fi
 
+if [[ -x "$(command -v fd)" ]]; then
+    alias fd="fd"
+else
+    alias fd="find"
+fi
+
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -g -A key
