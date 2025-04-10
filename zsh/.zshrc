@@ -45,13 +45,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -e /usr/bin/nvim ] && export EDITOR="/usr/bin/nvim" && export VISUAL="/usr/bin/nvim"
 [ -e /usr/local/bin/nvim ] && export EDITOR="/usr/local/bin/nvim" && export VISUAL="/usr/local/bin/nvim"
 
-[ -e /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[ -e ~/.pyenv ] && command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-[ -e ~/.pyenv ] && eval "$(pyenv init -)"
-
 # zoxide
 export PATH="$HOME/.local/bin:$PATH"
 [ -e /usr/bin/zoxide ] || [ -e ~/.local/bin/zoxide ] && eval "$(zoxide init zsh)"
@@ -61,6 +54,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # broot
 [ -e $HOME/.config/broot/launcher/bash/br ] && source $HOME/.config/broot/launcher/bash/br
+
+# uv
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
