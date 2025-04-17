@@ -16,11 +16,13 @@
 	added = green bold
 	changed = yellow bold
 	untracked = red bold
+[branch]
+	sort = -committerdate
 [alias]
 	a = add
 	aa = add -A
-	br = branch
-	ba = branch -a
+	br = branch -v
+	ba = branch -rv
 	bd = branch --delete
 	c = clean
 	co = checkout
