@@ -51,8 +51,8 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -e $HOME/.config/broot/launcher/bash/br ] && source $HOME/.config/broot/launcher/bash/br
 
 # uv
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+[ -e ~/.local/bin/uv ] && eval "$(uv generate-shell-completion zsh)"
+[ -e ~/.local/bin/uvx ] && eval "$(uvx --generate-shell-completion zsh)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
