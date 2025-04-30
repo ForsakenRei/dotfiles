@@ -38,7 +38,7 @@
 	fu = fetch upstream
 	mg = merge
 	ps = push
-	psf = push -f
+	psf = push --force-with-lease
 	psu = push --set-upstream
 	pl = pull
 	plu = pull upstream
