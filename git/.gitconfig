@@ -58,6 +58,7 @@
 	sc = stash clear
 	sd = stash drop
 	st = status
+	sw = switch
 	smu = submodule update --init --recursive
 	sma = submodule add
 	smi = submodule init
