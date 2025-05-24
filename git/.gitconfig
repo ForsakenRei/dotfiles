@@ -62,6 +62,9 @@
 	smu = submodule update --init --recursive
 	sma = submodule add
 	smi = submodule init
+	wa = worktree add
+	wr = worktree remove
+	wl = worktree list
 [credential "https://github.com"]
 	username = ForsakenRei
 	credentialStore = cache
