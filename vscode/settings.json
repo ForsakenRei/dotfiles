@@ -1,0 +1,165 @@
+{
+  "workbench.iconTheme": "vscode-icons",
+  "glassit.alpha": 250,
+  "terminal.integrated.tabs.location": "left",
+  "gitlens.codeLens.scopes": ["document"],
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    }
+  ],
+  "editor.fontFamily": "Consolas, 'Courier New', monospace, SauceCodePro Nerd Font",
+  "editor.inlineSuggest.enabled": true,
+  "remote.SSH.remotePlatform": {
+    "pi4": "linux",
+    "pi0": "linux",
+    "alpha": "linux",
+    "dev00": "linux",
+    "redroid": "linux",
+    "docker": "linux",
+    "pt": "linux",
+    "scrap": "linux",
+    "pi4-sub": "linux",
+    "pi4-main": "linux",
+    "oracle": "linux",
+    "beta": "linux"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "notebook.lineNumbers": "on",
+  "terminal.integrated.minimumContrastRatio": 3,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.formatOnSave": true
+  },
+  "[c]": {
+    "editor.formatOnSave": false
+  },
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "notebook.formatOnSave.enabled": true,
+  "diffEditor.codeLens": true,
+  "editor.minimap.autohide": true,
+  "gitlens.advanced.messages": {
+    "suppressCreatePullRequestPrompt": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "python.autoComplete.extraPaths": [],
+  "python.analysis.extraPaths": [],
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "projectManager.ignoreProjectsWithinProjects": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.formatOnSave": true
+  },
+  "terminal.integrated.autoReplies": {},
+  "github.copilot.editor.enableCodeActions": true,
+  "workbench.colorTheme": "Tokyo Night",
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "none",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.rulers": [120],
+  "docker.extension.enableComposeLanguageServer": false,
+  "cSpell.diagnosticLevel": "Hint"
+}

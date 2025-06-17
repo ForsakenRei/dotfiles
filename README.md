@@ -5,9 +5,10 @@ My dotfiles for Linux and Windows
 - zsh
 - tmux
 - git
+- vscode
 - neovim
 - rime
 - broot
 - btop
 - midnight commander
-
+- rime
