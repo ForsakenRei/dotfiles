@@ -57,6 +57,7 @@
 	sd = stash drop
 	st = status
 	sw = switch
+	sm = submodule
 	smu = submodule update --init --recursive
 	wt = worktree
 [credential]
