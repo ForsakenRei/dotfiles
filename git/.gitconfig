@@ -25,6 +25,7 @@
 	br = branch -v
 	ba = branch -rv
 	bd = branch --delete
+	bu = branch -u
 	c = clean
 	co = checkout
 	cm = commit -m
@@ -37,7 +38,7 @@
 	mg = merge
 	ps = push
 	psf = push --force-with-lease
-	psu = push --set-upstream
+	psu = push -u
 	pl = pull
 	plu = pull upstream
 	rb = rebase -i
