@@ -1,165 +1,153 @@
 {
-  "workbench.iconTheme": "vscode-icons",
-  "glassit.alpha": 250,
-  "terminal.integrated.tabs.location": "left",
-  "gitlens.codeLens.scopes": ["document"],
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "better-comments.tags": [
-    {
-      "tag": "!",
-      "color": "#FF2D00",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": true
-    },
-    {
-      "tag": "?",
-      "color": "#3498DB",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": true
-    },
-    {
-      "tag": "//",
-      "color": "#474747",
-      "strikethrough": true,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": true
-    },
-    {
-      "tag": "todo",
-      "color": "#FF8C00",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": true
-    },
-    {
-      "tag": "*",
-      "color": "#98C379",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": false,
-      "italic": true
-    }
-  ],
-  "editor.fontFamily": "Consolas, 'Courier New', monospace, SauceCodePro Nerd Font",
-  "editor.inlineSuggest.enabled": true,
-  "remote.SSH.remotePlatform": {
-    "pi4": "linux",
-    "pi0": "linux",
-    "alpha": "linux",
-    "dev00": "linux",
-    "redroid": "linux",
-    "docker": "linux",
-    "pt": "linux",
-    "scrap": "linux",
-    "pi4-sub": "linux",
-    "pi4-main": "linux",
-    "oracle": "linux",
-    "beta": "linux"
+  "[c]": {
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "notebook.lineNumbers": "on",
-  "terminal.integrated.minimumContrastRatio": 3,
-  "terminal.integrated.profiles.linux": {
-    "bash": {
-      "path": "bash",
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "zsh"
-    },
-    "tmux": {
-      "path": "tmux",
-      "icon": "terminal-tmux"
-    }
-  },
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "[python]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
-  },
   "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.formatOnSave": true
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
     "editor.formatOnSave": true
   },
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml",
     "editor.formatOnSave": true
   },
-  "[c]": {
-    "editor.formatOnSave": false
-  },
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "notebook.formatOnSave.enabled": true,
-  "diffEditor.codeLens": true,
-  "editor.minimap.autohide": true,
-  "gitlens.advanced.messages": {
-    "suppressCreatePullRequestPrompt": true
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[dockercompose]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "python.autoComplete.extraPaths": [],
-  "python.analysis.extraPaths": [],
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "projectManager.ignoreProjectsWithinProjects": true,
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "editor.formatOnSave": true
-  },
-  "terminal.integrated.autoReplies": {},
-  "github.copilot.editor.enableCodeActions": true,
-  "workbench.colorTheme": "Tokyo Night",
-  "[vue]": {
-    "editor.defaultFormatter": "Vue.volar",
-    "editor.formatOnSave": true
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.startupEditor": "none",
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.rulers": [120],
+  "better-comments.tags": [
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#FF2D00",
+      "italic": true,
+      "strikethrough": false,
+      "tag": "!",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#3498DB",
+      "italic": true,
+      "strikethrough": false,
+      "tag": "?",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#474747",
+      "italic": true,
+      "strikethrough": true,
+      "tag": "//",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#FF8C00",
+      "italic": true,
+      "strikethrough": false,
+      "tag": "todo",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#98C379",
+      "italic": true,
+      "strikethrough": false,
+      "tag": "*",
+      "underline": false
+    }
+  ],
+  "cSpell.diagnosticLevel": "Hint",
+  "diffEditor.codeLens": true,
   "docker.extension.enableComposeLanguageServer": false,
-  "cSpell.diagnosticLevel": "Hint"
+  "editor.fontFamily": "Consolas",
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.autohide": true,
+  "editor.rulers": [120],
+  "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "github.copilot.editor.enableCodeActions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
+  "gitlens.advanced.messages": {
+    "suppressCreatePullRequestPrompt": true
+  },
+  "gitlens.codeLens.scopes": ["document"],
+  "glassit.alpha": 250,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+  "projectManager.ignoreProjectsWithinProjects": true,
+  "python.autoComplete.extraPaths": [],
+  "remote.SSH.remotePlatform": {
+    "alpha": "linux",
+    "beta": "linux"
+  },
+  "terminal.integrated.autoReplies": {},
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.minimumContrastRatio": 3,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "icon": "terminal-bash",
+      "path": "bash"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    },
+    "zsh": {
+      "path": "zsh"
+    }
+  },
+  "terminal.integrated.tabs.location": "left",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none"
 }
