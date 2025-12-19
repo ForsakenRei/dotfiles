@@ -91,10 +91,17 @@ alias sctl="systemctl"
 
 # conditional alias
 if [[ -x "$(command -v eza)" ]]; then
-    alias ll="eza --icons --git -lhg --group-directories-first"
-    alias la="eza --icons --git -lahg --group-directories-first"
-    alias ld="eza --icons --git -lahgD"
-    alias lf="eza --icons --git -lahg | rg -v '^d'"
+    if [[ "$(uname -m)" == "x86_64" ]]; then
+        alias ll="eza --icons --git -lhg --group-directories-first"
+        alias la="eza --icons --git -lahg --group-directories-first"
+        alias ld="eza --icons --git -lahgD"
+        alias lf="eza --icons --git -lahg | rg -v '^d'"
+    elif [[ "$(uname -m)" == "aarch64" ]]; then
+        alias ll="eza --icons -lhg --group-directories-first"
+        alias la="eza --icons -lahg --group-directories-first"
+        alias ld="eza --icons -lahgD"
+        alias lf="eza --icons -lahg | rg -v '^d'"
+    fi
 else
     alias ll="ls -lh --group-directories-first"
     alias la="ls -lah --group-directories-first"
