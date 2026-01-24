@@ -131,7 +131,9 @@ else
     alias rg="grep -n --color=auto"
 fi
 
-if [[ -x "$(command -v bat)" ]]; then
+if [[ -x "$(command -v batcat)" ]]; then
+    alias cat="batcat --theme=TwoDark"
+elif [[ -x "$(command -v bat)" ]]; then
     alias cat="bat --theme=TwoDark"
 else
     alias cat="cat"
