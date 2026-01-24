@@ -54,10 +54,8 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -e ~/.local/bin/uv ] && eval "$(uv generate-shell-completion zsh)"
 [ -e ~/.local/bin/uvx ] && eval "$(uvx --generate-shell-completion zsh)"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# mise
+eval "$( /home/shigure/.local/bin/mise activate zsh)"
 
 # zsh plugins
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
