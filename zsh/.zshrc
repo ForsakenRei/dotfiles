@@ -55,7 +55,7 @@ export PATH="$HOME/.local/bin:$PATH"
 [ -e ~/.local/bin/uvx ] && eval "$(uvx --generate-shell-completion zsh)"
 
 # mise
-eval "$( /home/shigure/.local/bin/mise activate zsh)"
+eval "$( ~/.local/bin/mise activate zsh)"
 
 # zsh plugins
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
