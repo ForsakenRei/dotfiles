@@ -17,7 +17,7 @@
     "editor.formatOnSave": true
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.json-language-features",
     "editor.formatOnSave": false
   },
   "[jsonc]": {
@@ -30,7 +30,8 @@
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
+      "source.organizeImports.ruff": "explicit",
+      "source.fixAll.ruff": "explicit"
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
@@ -103,7 +104,7 @@
   "docker.extension.enableComposeLanguageServer": false,
   "editor.fontFamily": "Consolas",
   "editor.inlineSuggest.enabled": true,
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "editor.rulers": [120],
   "editor.suggestSelection": "first",
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -147,7 +148,41 @@
     }
   },
   "terminal.integrated.tabs.location": "left",
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "xml.server.preferBinary": true,
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.preferredLocation": "panel",
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
+  "claudeCode.hideOnboarding": true,
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": false,
+    "repositories": true,
+    "searchAndCompare": false,
+    "launchpad": true
+  },
+  "github.copilot.nextEditSuggestions.eagerness": "low",
+  "gitlens.graph.changesColumn.enabled": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": false
 }
